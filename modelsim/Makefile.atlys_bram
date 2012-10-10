@@ -105,6 +105,7 @@ base:
 mem_main:
 	vlib work
 	vcom $(OPTIONS) -work work $(JOPDIR)/../xilinx/atlys/ipcore/sysram_sim.vhd
+	vcom $(OPTIONS) -work work $(JOPDIR)/../xilinx/atlys/ipcore/clkdivider_sim.vhd
 
 mem_gen:
 	cat mem_main.dat |./dat2srec.py  > sdram.srec

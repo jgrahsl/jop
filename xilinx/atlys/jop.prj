@@ -2,6 +2,7 @@
 # Top: jop
 vhdl work "ipcore/xram.vhd"
 vhdl work "ipcore/sysram.vhd"
+vhdl work "ipcore/clkdivider.vhd"
 vhdl work "../../vhdl/top/jop_config_global.vhd"
 vhdl work "../../vhdl/top/jop_config_atlys.vhd"
 vhdl work "../../vhdl/core/jop_types.vhd"

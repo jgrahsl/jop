@@ -1,5 +1,5 @@
 
- --
+--
 --
 --  This file is a part of JOP, the Java Optimized Processor
 --
@@ -81,7 +81,7 @@ architecture rtl of jop is
 -- Signals
 --
   signal clk_int : std_logic;
-
+  signal rst : std_logic;
   signal int_res : std_logic;
   signal res_cnt : unsigned(2 downto 0) := "000";  -- for the simulation
 
@@ -123,7 +123,7 @@ architecture rtl of jop is
 
   signal we : std_logic;
   signal en : std_logic;
-
+  signal locked : std_logic;
 begin
 
   ser_ncts <= '0';
@@ -131,18 +131,18 @@ begin
 -- intern reset
 --
 
-  process(clk_int)
-  begin
-    if rising_edge(clk_int) then
-      if (res_cnt = 7) then
-        null;
-      else
-        res_cnt <= res_cnt+1;
-      end if;
+  --process(clk)
+  --begin
+  --  if rising_edge(clk) then
+  --    if (res_cnt = 7) then
+  --      null;
+  --    else
+  --      res_cnt <= res_cnt+1;
+  --    end if;
 
-      int_res <= not res_cnt(0) or not res_cnt(1) or not res_cnt(2);
-    end if;
-  end process;
+  --    int_res <= not res_cnt(0) or not res_cnt(1) or not res_cnt(2);
+  --  end if;
+  --end process;
 
 --
 --      Status Output
@@ -153,7 +153,19 @@ begin
 --
 --      components of jop
 --
-  clk_int <= clk;
+  your_instance_name : entity work.clkdivider
+    port map
+    (                                   -- Clock in ports
+      CLK_IN1  => clk,
+      -- Clock out ports
+      CLK_OUT1 => clk_int,
+      -- Status and control signals
+      RESET    => int_res,
+      LOCKED   => LOCKED);
+
+  
+  rst <= not locked;
+
 
   cpu : entity work.jopcpu
     generic map(
@@ -161,13 +173,13 @@ begin
       block_bits => block_bits,
       spm_width  => spm_width
       )
-    port map(clk_int, int_res,
+    port map(clk_int, rst,
              sc_mem_out, sc_mem_in,
              sc_io_out, sc_io_in,
              irq_in, irq_out, exc_req);
 
   io : entity work.scio
-    port map (clk_int, int_res,
+    port map (clk_int, rst,
               sc_io_out, sc_io_in,
               irq_in, irq_out, exc_req,
 
@@ -187,7 +199,7 @@ begin
       ram_ws    => ram_cnt-1,
       addr_bits => 18
       )
-    port map (clk_int, int_res,
+    port map (clk_int, rst,
               sc_mem_out, sc_mem_in,
 
               ram_addr    => ram_addr,
@@ -200,16 +212,16 @@ begin
               );
 
 
-  my_sysram: entity work.sysram
+  my_sysram : entity work.sysram
     port map (
-      clka  => clk,                    -- [IN]
-      wea(0)   => we,                     -- [IN]
-      addra => ram_addr(15 downto 0),                   -- [IN]
-      dina  => ram_dout,                    -- [IN]
-      douta => ram_din);                  -- [OUT]
-  
+      clka   => clk_int,                    -- [IN]
+      wea(0) => we,                     -- [IN]
+      addra  => ram_addr(15 downto 0),  -- [IN]
+      dina   => ram_dout,               -- [IN]
+      douta  => ram_din);               -- [OUT]
+
   we <= not ram_nwe;
-  
+
   --process (clk_int)
   --begin
   --  if clk_int'event and clk_int = '1' then
@@ -223,5 +235,5 @@ begin
   --    end if;
   --  end if;
   --end process;
-    
+  
 end rtl;
