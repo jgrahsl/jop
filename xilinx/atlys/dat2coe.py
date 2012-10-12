@@ -7,7 +7,7 @@ ec = 0
 oldp = 0
 ph = 0
 
-print "memory_initialization_radix=2;\nmemory_initialization_vector="
+#print "memory_initialization_radix=2;\nmemory_initialization_vector="
 
 low = 0
 first = True
@@ -33,6 +33,6 @@ for line in sys.stdin:
         print "Error"
         sys.exit(1)
 
-    if i < 256:
-        print ","
+#    if i < 256:
+#        print ","
 

@@ -26,7 +26,8 @@ vhdl work "../../vhdl/core/decode.vhd"
 vhdl work "ipcore/xram.vhd"
 vhdl work "../../vhdl/xilinx/xram_s6.vhd"
 
-vhdl work "../../vhdl/xilinx/s6_jbc.vhd"
+vhdl work "ipcore/jbc_mem.vhd"
+vhdl work "../../vhdl/xilinx/s6_jbc_core.vhd"
 vhdl work "../../vhdl/jtbl.vhd"
 vhdl work "../../vhdl/rom.vhd"
 
