@@ -7,27 +7,24 @@ JOPDIR=../vhdl
 #OPTIONS=-93 -quiet -check_synthesis -lint -pedanticerrors
 OPTIONS=-93 -quiet -novopt
 
-all: clean gaisler mem_main base
+all: clean gaisler base
 	vcom $(OPTIONS) -work work $(JOPDIR)/simulation/tb_atlys.vhd
 
 gaisler:
 	vlib grlib
 	vlib gaisler
 
-#  ALTERA
-#
+# ALTERA
 #	vcom $(OPTIONS) -work altera_mf  ${QUARTUS_ROOTDIR}/eda/sim_lib/altera_mf_components.vhd
 #	vcom $(OPTIONS) -work altera_mf  ${QUARTUS_ROOTDIR}/eda/sim_lib/altera_mf.vhd
-
 # XILINX
-	vmap xilinxcorelib /mnt/store/xilinx/14.2/ISE_DS/ISE/vhdl/mti_se/6.4/lin/xilinxcorelib/
+#	vmap xilinxcorelib /mnt/store/xilinx/14.2/ISE_DS/ISE/vhdl/mti_se/6.4/lin/xilinxcorelib/
 
 	vcom $(OPTIONS) -work grlib ${JOPDIR}/../ext/gaisler/version.vhd 
 	vcom $(OPTIONS) -work grlib ${JOPDIR}/../ext/gaisler/stdlib.vhd 
 	vcom $(OPTIONS) -work grlib ${JOPDIR}/../ext/gaisler/stdio.vhd 
 	vcom $(OPTIONS) -work grlib ${JOPDIR}/../ext/gaisler/amba.vhd 
 	vcom $(OPTIONS) -work grlib ${JOPDIR}/../ext/gaisler/devices.vhd
-
 	vcom $(OPTIONS) -work gaisler ${JOPDIR}/../ext/gaisler/sim.vhd
 
 
@@ -36,53 +33,30 @@ base:
 	vlib techmap
 
 	vcom $(OPTIONS) -work work $(JOPDIR)/simpcon/sc_pack.vhd
-
-
-#############
 	vcom $(OPTIONS) -work work $(JOPDIR)/top/jop_config_global.vhd
 	vcom $(OPTIONS) -work work $(JOPDIR)/simulation/sim_jop_config_100.vhd
-#vhdl work "../../vhdl/top/jop_config_atlys.vhd"
-
-	vcom $(OPTIONS) -work work $(JOPDIR)/simulation/sim_pll.vhd
 
 	vcom $(OPTIONS) -work work $(JOPDIR)/simulation/sim_ram.vhd
-#reads mem_ram.data
-#uses shared variable instead of BRAM
-#resembles xilinx/xram.vhd and altera/aram.vhd uses ram.mif
-#primitive (ipcore)
 #vcom $(OPTIONS) -work work $(JOPDIR)/"ipcore/xram.vhd"
 #wrapper for generic interface
 #vhdl work "../../vhdl/xilinx/xram_s6.vhd"
 
-	vcom $(OPTIONS) -work work $(JOPDIR)/simulation/sim_jbc.vhd
-#uses shared variable instead of BRAM
-#"../../vhdl/xilinx/s6_jbc.vhd"
 
-	vcom $(OPTIONS) -work work $(JOPDIR)/simulation/sim_rom.vhd
-#uses mem_rom.dat instead of hardcoded
-#"rom.vhd"
-#reads mem_rom.dat
-
-
-	vcom $(OPTIONS) -work work $(JOPDIR)/simulation/sim_memory16.vhd
-#reads mem_main.dat
-#simulates main memory for java code
+	vcom $(OPTIONS) -work work $(JOPDIR)/xilinx/s6_jbc.vhd
+	vcom $(OPTIONS) -work work $(JOPDIR)/rom.vhd
 
 	vcom $(OPTIONS) -work work $(JOPDIR)/simulation/sim_sc_uart.vhd
 
 	vcom $(OPTIONS) -work work $(JOPDIR)/simulation/bytecode.vhd # naming
 	vcom $(OPTIONS) -work work $(JOPDIR)/simulation/microcode.vhd # naming
 
-#############
-	vcom $(OPTIONS) -work work $(JOPDIR)/core/jop_types.vhd
 
+	vcom $(OPTIONS) -work work $(JOPDIR)/core/jop_types.vhd
 	vcom $(OPTIONS) -work work $(JOPDIR)/cache/ocache.vhd
 	vcom $(OPTIONS) -work work $(JOPDIR)/cache/acache.vhd
-
 	vcom $(OPTIONS) -work work $(JOPDIR)/memory/sc_sram16.vhd
 	vcom $(OPTIONS) -work work $(JOPDIR)/memory/mem_sc.vhd
 	vcom $(OPTIONS) -work work $(JOPDIR)/memory/sdpram.vhd
-
 	vcom $(OPTIONS) -work work $(JOPDIR)/jtbl.vhd
 	vcom $(OPTIONS) -work work $(JOPDIR)/core/cache.vhd
 	vcom $(OPTIONS) -work work $(JOPDIR)/core/mul.vhd
@@ -98,19 +72,13 @@ base:
 	vcom $(OPTIONS) -work work $(JOPDIR)/scio/sc_sys.vhd 
 	vcom $(OPTIONS) -work work $(JOPDIR)/scio/scio_min.vhd
 
-##########
-	vcom $(OPTIONS) -work work $(JOPDIR)/top/jop_atlys.vhd
-
-
-mem_main:
-	vlib work
 	vcom $(OPTIONS) -work work $(JOPDIR)/../xilinx/atlys/ipcore/sysram_sim.vhd
 	vcom $(OPTIONS) -work work $(JOPDIR)/../xilinx/atlys/ipcore/clkdivider_sim.vhd
 
+	vcom $(OPTIONS) -work work $(JOPDIR)/top/jop_atlys.vhd
+
 mem_gen:
 	cat mem_main.dat |./dat2srec.py  > sdram.srec
-
-
 
 clean:
 	-rm -rf work

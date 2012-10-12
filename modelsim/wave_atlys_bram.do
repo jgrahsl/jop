@@ -31,8 +31,8 @@ add wave -noupdate -divider execute
 add wave -noupdate -format Literal -radix hexadecimal /tb_jop/joptop/cpu/core/stk/a
 add wave -noupdate -format Literal -radix hexadecimal /tb_jop/joptop/cpu/core/stk/b
 add wave -noupdate -divider mem_sc
-add wave -noupdate -format Literal -radix hexadecimal -expand /tb_jop/joptop/cpu/mem/mem_in
-add wave -noupdate -format Literal -radix hexadecimal -expand /tb_jop/joptop/cpu/mem/mem_out
+add wave -noupdate -format Literal -radix hexadecimal /tb_jop/joptop/cpu/mem/mem_in
+add wave -noupdate -format Literal -radix hexadecimal /tb_jop/joptop/cpu/mem/mem_out
 add wave -noupdate -format Literal -radix hexadecimal /tb_jop/joptop/cpu/mem/state
 add wave -noupdate -format Literal -radix hexadecimal /tb_jop/joptop/cpu/mem/addr_reg
 add wave -noupdate -format Literal -radix hexadecimal /tb_jop/joptop/cpu/mem/index
@@ -75,7 +75,7 @@ add wave -noupdate -divider SimpCon
 add wave -noupdate -format Literal -radix hexadecimal -expand /tb_jop/joptop/cpu/sc_mem_out
 add wave -noupdate -format Literal -radix hexadecimal -expand /tb_jop/joptop/cpu/sc_mem_in
 add wave -noupdate -divider {external signals}
-add wave -noupdate -format Literal /tb_jop/joptop/scm/sc_mem_out
+add wave -noupdate -format Literal -expand /tb_jop/joptop/scm/sc_mem_out
 add wave -noupdate -format Literal /tb_jop/joptop/scm/sc_mem_in
 add wave -noupdate -format Literal /tb_jop/joptop/scm/ram_addr
 add wave -noupdate -format Literal /tb_jop/joptop/scm/ram_dout
@@ -91,8 +91,43 @@ add wave -noupdate -format Literal /tb_jop/joptop/my_sysram/wea
 add wave -noupdate -format Literal /tb_jop/joptop/my_sysram/addra
 add wave -noupdate -format Literal /tb_jop/joptop/my_sysram/dina
 add wave -noupdate -format Literal /tb_jop/joptop/my_sysram/douta
+add wave -noupdate -format Literal /tb_jop/joptop/cpu/core/fch/jpaddr
+add wave -noupdate -format Literal /tb_jop/joptop/cpu/core/fch/pc_mux
+add wave -noupdate -format Literal /tb_jop/joptop/pcmux
+add wave -noupdate -divider uart
+add wave -noupdate -format Literal /tb_jop/joptop/io/ua/addr_bits
+add wave -noupdate -format Literal /tb_jop/joptop/io/ua/address
+add wave -noupdate -format Literal /tb_jop/joptop/io/ua/baud_rate
+add wave -noupdate -format Literal /tb_jop/joptop/io/ua/char
+add wave -noupdate -format Logic /tb_jop/joptop/io/ua/clk
+add wave -noupdate -format Literal /tb_jop/joptop/io/ua/clk_freq
+add wave -noupdate -format Logic /tb_jop/joptop/io/ua/ncts
+add wave -noupdate -format Logic /tb_jop/joptop/io/ua/nrts
+add wave -noupdate -format Logic /tb_jop/joptop/io/ua/rd
+add wave -noupdate -format Literal /tb_jop/joptop/io/ua/rd_data
+add wave -noupdate -format Logic /tb_jop/joptop/io/ua/rdrf
+add wave -noupdate -format Literal /tb_jop/joptop/io/ua/rdy_cnt
+add wave -noupdate -format Logic /tb_jop/joptop/io/ua/reset
+add wave -noupdate -format Logic /tb_jop/joptop/io/ua/rxd
+add wave -noupdate -format Literal /tb_jop/joptop/io/ua/rxf_depth
+add wave -noupdate -format Literal /tb_jop/joptop/io/ua/rxf_thres
+add wave -noupdate -format Logic /tb_jop/joptop/io/ua/tdre
+add wave -noupdate -format Logic /tb_jop/joptop/io/ua/txd
+add wave -noupdate -format Literal /tb_jop/joptop/io/ua/txf_depth
+add wave -noupdate -format Literal /tb_jop/joptop/io/ua/txf_thres
+add wave -noupdate -format Logic /tb_jop/joptop/io/ua/ua_wr
+add wave -noupdate -format Logic /tb_jop/joptop/io/ua/wr
+add wave -noupdate -format Literal /tb_jop/joptop/io/ua/wr_data
+add wave -noupdate -format Literal -expand /tb_jop/joptop/led
+add wave -noupdate -format Literal /tb_jop/joptop/io/sel
+add wave -noupdate -format Logic /tb_jop/joptop/io/sc_io_out.rd
+add wave -noupdate -divider memsc
+add wave -noupdate -format Literal /tb_jop/joptop/cpu/mem/base_reg
+add wave -noupdate -format Literal /tb_jop/joptop/cpu/mem/offset_reg
+add wave -noupdate -format Literal /tb_jop/joptop/cpu/mem/pos_reg
+add wave -noupdate -format Literal /tb_jop/joptop/cpu/mem/ain
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {56002 ps} 0} {{Cursor 2} {375656 ps} 0}
+WaveRestoreCursors {{Cursor 1} {11134435 ps} 0} {{Cursor 2} {4824771479 ps} 0}
 configure wave -namecolwidth 233
 configure wave -valuecolwidth 214
 configure wave -justifyvalue left
@@ -107,5 +142,5 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {683228 ps}
+WaveRestoreZoom {19995031894 ps} {20000261480 ps}
 bookmark add wave initial {{0 ps} {683228 ps}} 142

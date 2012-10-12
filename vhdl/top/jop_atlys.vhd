@@ -124,6 +124,9 @@ architecture rtl of jop is
   signal we : std_logic;
   signal en : std_logic;
   signal locked : std_logic;
+  signal clk_debug : std_logic;
+  signal pcmux		: std_logic_vector(7 downto 0);
+  signal r : std_logic;
 begin
 
   ser_ncts <= '0';
@@ -147,7 +150,14 @@ begin
 --
 --      Status Output
 --
-  led <= "10101010";
+
+  process (clk_int)
+  begin  -- process
+    if clk_int'event and clk_int = '1' then     -- rising clock edge
+      clk_debug <= not clk_debug;
+    end if;
+  end process;
+  led <= pcmux;
 
 
 --
@@ -176,7 +186,7 @@ begin
     port map(clk_int, rst,
              sc_mem_out, sc_mem_in,
              sc_io_out, sc_io_in,
-             irq_in, irq_out, exc_req);
+             irq_in, irq_out, exc_req,pcmux => pcmux);
 
   io : entity work.scio
     port map (clk_int, rst,
