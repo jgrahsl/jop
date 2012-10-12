@@ -186,7 +186,7 @@ begin
     port map(clk_int, rst,
              sc_mem_out, sc_mem_in,
              sc_io_out, sc_io_in,
-             irq_in, irq_out, exc_req,pcmux => pcmux);
+             irq_in, irq_out, exc_req);
 
   io : entity work.scio
     port map (clk_int, rst,

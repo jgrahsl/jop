@@ -7,12 +7,12 @@ JOPDIR=../vhdl
 #OPTIONS=-93 -quiet -check_synthesis -lint -pedanticerrors
 OPTIONS=-93 -quiet -novopt
 
-all: clean gaisler base
+all:  gaisler base
 	vcom $(OPTIONS) -work work $(JOPDIR)/simulation/tb_atlys.vhd
 
 gaisler:
-	vlib grlib
-	vlib gaisler
+#	vlib grlib
+#	vlib gaisler
 
 # ALTERA
 #	vcom $(OPTIONS) -work altera_mf  ${QUARTUS_ROOTDIR}/eda/sim_lib/altera_mf_components.vhd
@@ -36,10 +36,11 @@ base:
 	vcom $(OPTIONS) -work work $(JOPDIR)/top/jop_config_global.vhd
 	vcom $(OPTIONS) -work work $(JOPDIR)/simulation/sim_jop_config_100.vhd
 
-	vcom $(OPTIONS) -work work $(JOPDIR)/simulation/sim_ram.vhd
-#vcom $(OPTIONS) -work work $(JOPDIR)/"ipcore/xram.vhd"
+#	vcom $(OPTIONS) -work work $(JOPDIR)/simulation/sim_ram.vhd
+
 #wrapper for generic interface
-#vhdl work "../../vhdl/xilinx/xram_s6.vhd"
+	vcom $(OPTIONS) -work work $(JOPDIR)/../xilinx/atlys/ipcore/xram.vhd
+        vcom $(OPTIONS) -work work $(JOPDIR)/xilinx/xram_s6.vhd"
 
 
 	vcom $(OPTIONS) -work work $(JOPDIR)/xilinx/s6_jbc.vhd
@@ -82,7 +83,6 @@ mem_gen:
 
 clean:
 	-rm -rf work
-
 	-rm -rf transcript
 	-rm -rf gaisler
 	-rm -rf grlib

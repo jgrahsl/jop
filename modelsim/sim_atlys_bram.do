@@ -9,4 +9,4 @@ run 1000ns
 
 delete wave *
 do wave_atlys_bram.do
-run 20ms
+run 10ns
