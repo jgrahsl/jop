@@ -173,7 +173,7 @@ begin
       RESET    => int_res,
       LOCKED   => LOCKED);
 
-  
+  int_res <= '0';
   rst <= not locked;
 
 

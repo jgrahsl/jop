@@ -78,7 +78,7 @@ process
 	variable address	: natural;
 	variable cnt		: natural;
 
-	file memfile		: text is "mem_main.dat";
+	file memfile		: text is  "mem_main.dat";
 	variable memline	: line; 
 	variable l 			: line;
 	variable val		: integer;

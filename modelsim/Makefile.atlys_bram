@@ -36,12 +36,8 @@ base:
 	vcom $(OPTIONS) -work work $(JOPDIR)/top/jop_config_global.vhd
 	vcom $(OPTIONS) -work work $(JOPDIR)/simulation/sim_jop_config_100.vhd
 
-#	vcom $(OPTIONS) -work work $(JOPDIR)/simulation/sim_ram.vhd
-
-#wrapper for generic interface
 	vcom $(OPTIONS) -work work $(JOPDIR)/../xilinx/atlys/ipcore/xram.vhd
         vcom $(OPTIONS) -work work $(JOPDIR)/xilinx/xram_s6.vhd"
-
 
 	vcom $(OPTIONS) -work work $(JOPDIR)/xilinx/s6_jbc.vhd
 	vcom $(OPTIONS) -work work $(JOPDIR)/rom.vhd
@@ -73,8 +69,8 @@ base:
 	vcom $(OPTIONS) -work work $(JOPDIR)/scio/sc_sys.vhd 
 	vcom $(OPTIONS) -work work $(JOPDIR)/scio/scio_min.vhd
 
-	vcom $(OPTIONS) -work work $(JOPDIR)/../xilinx/atlys/ipcore/sysram_sim.vhd
-	vcom $(OPTIONS) -work work $(JOPDIR)/../xilinx/atlys/ipcore/clkdivider_sim.vhd
+	vcom $(OPTIONS) -work work $(JOPDIR)/../xilinx/atlys/ipcore/sysram.vhd
+	vcom $(OPTIONS) -work work $(JOPDIR)/../xilinx/atlys/ipcore/clkdivider.vhd
 
 	vcom $(OPTIONS) -work work $(JOPDIR)/top/jop_atlys.vhd
 
