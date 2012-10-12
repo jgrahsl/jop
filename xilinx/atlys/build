@@ -4,7 +4,7 @@
 
 xst -intstyle ise -ifn jop.xst -ofn jop.syr  && \
 ngdbuild -intstyle ise -dd _ngo -sd ipcore -nt timestamp -uc jop.ucf -p xc6slx45-csg324-3 jop.ngc jop.ngd   && \
-map -intstyle ise  -convert_bram8 -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt 2 -ir off -pr off -lc off -detail -power off -o jop_map.ncd jop.ngd jop.pcf  && \
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt 2 -ir off -pr off -lc off -detail -power off -o jop_map.ncd jop.ngd jop.pcf  && \
 par -w -intstyle ise -ol high -mt 2 jop_map.ncd jop.ncd jop.pcf && \
 bitgen -intstyle ise -f jop.ut jop.ncd && \
 impact -batch xsvf.batch && \
