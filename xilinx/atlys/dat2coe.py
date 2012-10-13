@@ -7,7 +7,9 @@ ec = 0
 oldp = 0
 ph = 0
 
-#print "memory_initialization_radix=2;\nmemory_initialization_vector="
+if len(sys.argv) == 3:
+    if sys.argv[2] == "coe":
+        print "memory_initialization_radix=2;\nmemory_initialization_vector="
 
 low = 0
 first = True

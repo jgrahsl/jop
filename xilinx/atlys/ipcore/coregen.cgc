@@ -371,8 +371,6 @@
       </spirit:componentInstance>
       <spirit:componentInstance>
          <spirit:instanceName>sysram</spirit:instanceName>
-         <spirit:displayName>Block Memory Generator</spirit:displayName>
-         <spirit:description>The Xilinx LogiCORE IP Block Memory Generator replaces the Dual Port Block Memory and Single Port Block Memory LogiCOREs, but is not a direct drop-in replacement.  It should be used in all new Xilinx designs. The core supports RAM and ROM functions over a wide range of widths and depths. Use this core to generate block memories with symmetric or asymmetric read and write port widths, as well as cores which can perform simultaneous write operations to separate locations, and simultaneous read operations from the same location. For more information on differences in interface and feature support between this core and the Dual Port Block Memory and Single Port Block Memory LogiCOREs, please consult the data sheet.</spirit:description>
          <spirit:componentRef spirit:vendor="xilinx.com" spirit:library="ip" spirit:name="blk_mem_gen" spirit:version="7.2" />
          <spirit:configurableElementValues>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.COMPONENT_NAME">sysram</spirit:configurableElementValue>
@@ -496,7 +494,7 @@
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_DISABLE_WARN_BHV_RANGE">0</spirit:configurableElementValue>
          </spirit:configurableElementValues>
          <spirit:vendorExtensions>
-            <xilinx:instanceProperties>
+            <xilinx:instanceProperties xmlns:xilinx="http://www.xilinx.com">
                <xilinx:projectOptions>
                   <xilinx:projectName>coregen</xilinx:projectName>
                   <xilinx:outputDirectory>./</xilinx:outputDirectory>
@@ -531,34 +529,20 @@
             </xilinx:instanceProperties>
             <xilinx:generationHistory>
                <xilinx:fileSet>
-                  <xilinx:name>ip_upgrade_generator</xilinx:name>
-                  <xilinx:file>
-                     <xilinx:name>./sysram_upgrade.txt</xilinx:name>
-                     <xilinx:userFileType>ignore</xilinx:userFileType>
-                     <xilinx:userFileType>txt</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:33:22 GMT 2012</xilinx:timeStamp>
-                     <xilinx:checkSum>0x7C77BC0D</xilinx:checkSum>
-                     <xilinx:generationId>generationID_152152107</xilinx:generationId>
-                  </xilinx:file>
-               </xilinx:fileSet>
-               <xilinx:fileSet>
-                  <xilinx:name>view_upgrade_report_generator</xilinx:name>
-               </xilinx:fileSet>
-               <xilinx:fileSet>
                   <xilinx:name>customization_generator</xilinx:name>
                   <xilinx:file>
                      <xilinx:name>./summary.log</xilinx:name>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:37:48 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:18:47 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xF84C6F1A</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram.mif</xilinx:name>
                      <xilinx:userFileType>mif</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:09 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:09 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x75A8BFC7</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -566,16 +550,16 @@
                   <xilinx:file>
                      <xilinx:name>./summary.log</xilinx:name>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:16 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xF84C6F1A</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram.mif</xilinx:name>
                      <xilinx:userFileType>mif</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:38 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x75A8BFC7</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -583,9 +567,9 @@
                   <xilinx:file>
                      <xilinx:name>./sysram.xco</xilinx:name>
                      <xilinx:userFileType>xco</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:38 GMT 2012</xilinx:timeStamp>
-                     <xilinx:checkSum>0xE5138B74</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
+                     <xilinx:checkSum>0x6BC7FE13</xilinx:checkSum>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -596,7 +580,7 @@
                      <xilinx:userFileType>txt</xilinx:userFileType>
                      <xilinx:timeStamp>Sat Jul 21 06:10:41 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x5661B352</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/doc/blk_mem_gen_v7_2_vinfo.html</xilinx:name>
@@ -604,7 +588,7 @@
                      <xilinx:userFileType>unknown</xilinx:userFileType>
                      <xilinx:timeStamp>Sat Jul 21 06:10:41 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x4D7A616C</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/doc/pg058-blk-mem-gen.pdf</xilinx:name>
@@ -612,7 +596,7 @@
                      <xilinx:userFileType>pdf</xilinx:userFileType>
                      <xilinx:timeStamp>Sat Jul 21 06:10:41 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xAE5E57E0</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -621,329 +605,329 @@
                      <xilinx:name>./sysram/example_design/sysram_exdes.ucf</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>ucf</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xC44C6B6D</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/example_design/sysram_exdes.vhd</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x868304E6</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/example_design/sysram_exdes.xdc</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>xdc</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x7684D6D4</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/example_design/sysram_prod.vhd</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x9B4A3CE5</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/implement/implement.bat</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x289F63E4</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/implement/implement.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x57B9DED6</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/implement/planAhead_ise.bat</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x98006727</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/implement/planAhead_ise.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x094D744D</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/implement/planAhead_ise.tcl</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xF1DA07AC</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/implement/xst.prj</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xF87059CF</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/implement/xst.scr</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x9C74E43D</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/addr_gen.vhd</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x886696A8</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/bmg_stim_gen.vhd</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x724239DA</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/bmg_tb_pkg.vhd</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xD4F2B061</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/checker.vhd</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x2A8E7144</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/data_gen.vhd</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xE0759FCA</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/functional/simcmds.tcl</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x606971E0</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/functional/simulate_isim.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x657BA14D</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/functional/simulate_mti.bat</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x86EA5D67</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/functional/simulate_mti.do</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x3D5A06E0</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/functional/simulate_mti.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x86EA5D67</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/functional/simulate_ncsim.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xBF3E07B8</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/functional/simulate_vcs.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x7BE3C282</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/functional/ucli_commands.key</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xD195E71E</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/functional/vcs_session.tcl</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x67D401D3</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/functional/wave_mti.do</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x5C35125A</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/functional/wave_ncsim.sv</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xF42A5C28</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/random.vhd</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xE1CDC376</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/sysram_synth.vhd</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x0FA1173F</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/sysram_tb.vhd</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x1F50D0DF</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/timing/simcmds.tcl</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x606971E0</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/timing/simulate_isim.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x69EC7D24</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/timing/simulate_mti.bat</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x86EA5D67</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/timing/simulate_mti.do</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xAD408CFA</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/timing/simulate_mti.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x86EA5D67</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/timing/simulate_ncsim.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x72ABFA73</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/timing/simulate_vcs.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x0C0010EE</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/timing/ucli_commands.key</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xD195E71E</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/timing/vcs_session.tcl</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xD8234CCE</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/timing/wave_mti.do</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x569FB116</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram/simulation/timing/wave_ncsim.sv</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:38:39 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:19:38 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x03548D7A</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -951,9 +935,9 @@
                   <xilinx:file>
                      <xilinx:name>./sysram.ngc</xilinx:name>
                      <xilinx:userFileType>ngc</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:40:51 GMT 2012</xilinx:timeStamp>
-                     <xilinx:checkSum>0x68D9FEF0</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:timeStamp>Sat Oct 13 10:21:50 GMT 2012</xilinx:timeStamp>
+                     <xilinx:checkSum>0xB3B7D5BB</xilinx:checkSum>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -967,9 +951,9 @@
                   <xilinx:file>
                      <xilinx:name>./sysram.vho</xilinx:name>
                      <xilinx:userFileType>vho</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:40:51 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:21:51 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xC3EF21DC</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -978,9 +962,9 @@
                      <xilinx:name>./sysram_synth.vhd</xilinx:name>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
                      <xilinx:userFileType>vhdlSynthesis</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:40:51 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:21:51 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x30322B49</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -988,9 +972,9 @@
                   <xilinx:file>
                      <xilinx:name>./sysram.vhd</xilinx:name>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:40:51 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:21:51 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x3E407CF0</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -1001,23 +985,23 @@
                   <xilinx:file>
                      <xilinx:name>./summary.log</xilinx:name>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:40:59 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:21:58 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xF84C6F1A</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram.asy</xilinx:name>
                      <xilinx:userFileType>asy</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:41:20 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:22:20 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x16D3D8BC</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram.mif</xilinx:name>
                      <xilinx:userFileType>mif</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:41:20 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:22:20 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x75A8BFC7</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -1026,9 +1010,9 @@
                      <xilinx:name>./sysram_xmdf.tcl</xilinx:name>
                      <xilinx:userFileType>tclXmdf</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:41:20 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:22:20 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x81E537BA</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -1037,17 +1021,17 @@
                      <xilinx:name>./sysram.gise</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>gise</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:41:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:22:23 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x1A4483C4</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram.xise</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>xise</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:41:24 GMT 2012</xilinx:timeStamp>
-                     <xilinx:checkSum>0x2D69C34F</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:timeStamp>Sat Oct 13 10:22:23 GMT 2012</xilinx:timeStamp>
+                     <xilinx:checkSum>0x2208E53A</xilinx:checkSum>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -1056,17 +1040,17 @@
                      <xilinx:name>./sysram.gise</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>gise</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:41:27 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:22:26 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x9328A5D7</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./sysram.xise</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>xise</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:41:27 GMT 2012</xilinx:timeStamp>
-                     <xilinx:checkSum>0xD6ECB084</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:timeStamp>Sat Oct 13 10:22:26 GMT 2012</xilinx:timeStamp>
+                     <xilinx:checkSum>0x57CB700B</xilinx:checkSum>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -1079,9 +1063,9 @@
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>txtFlist</xilinx:userFileType>
                      <xilinx:userFileType>txt</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:41:27 GMT 2012</xilinx:timeStamp>
-                     <xilinx:checkSum>0x83241449</xilinx:checkSum>
-                     <xilinx:generationId>generationID_3269633665</xilinx:generationId>
+                     <xilinx:timeStamp>Sat Oct 13 10:22:26 GMT 2012</xilinx:timeStamp>
+                     <xilinx:checkSum>0x75684BF2</xilinx:checkSum>
+                     <xilinx:generationId>generationID_3673615094</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -1092,8 +1076,6 @@
       </spirit:componentInstance>
       <spirit:componentInstance>
          <spirit:instanceName>xram</spirit:instanceName>
-         <spirit:displayName>Block Memory Generator</spirit:displayName>
-         <spirit:description>The Xilinx LogiCORE IP Block Memory Generator replaces the Dual Port Block Memory and Single Port Block Memory LogiCOREs, but is not a direct drop-in replacement.  It should be used in all new Xilinx designs. The core supports RAM and ROM functions over a wide range of widths and depths. Use this core to generate block memories with symmetric or asymmetric read and write port widths, as well as cores which can perform simultaneous write operations to separate locations, and simultaneous read operations from the same location. For more information on differences in interface and feature support between this core and the Dual Port Block Memory and Single Port Block Memory LogiCOREs, please consult the data sheet.</spirit:description>
          <spirit:componentRef spirit:vendor="xilinx.com" spirit:library="ip" spirit:name="blk_mem_gen" spirit:version="7.2" />
          <spirit:configurableElementValues>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.COMPONENT_NAME">xram</spirit:configurableElementValue>
@@ -1217,7 +1199,7 @@
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_DISABLE_WARN_BHV_RANGE">0</spirit:configurableElementValue>
          </spirit:configurableElementValues>
          <spirit:vendorExtensions>
-            <xilinx:instanceProperties>
+            <xilinx:instanceProperties xmlns:xilinx="http://www.xilinx.com">
                <xilinx:projectOptions>
                   <xilinx:projectName>coregen</xilinx:projectName>
                   <xilinx:outputDirectory>./</xilinx:outputDirectory>
@@ -1252,34 +1234,20 @@
             </xilinx:instanceProperties>
             <xilinx:generationHistory>
                <xilinx:fileSet>
-                  <xilinx:name>ip_upgrade_generator</xilinx:name>
-                  <xilinx:file>
-                     <xilinx:name>./xram_upgrade.txt</xilinx:name>
-                     <xilinx:userFileType>ignore</xilinx:userFileType>
-                     <xilinx:userFileType>txt</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:28:51 GMT 2012</xilinx:timeStamp>
-                     <xilinx:checkSum>0xCE38D09A</xilinx:checkSum>
-                     <xilinx:generationId>generationID_2760799219</xilinx:generationId>
-                  </xilinx:file>
-               </xilinx:fileSet>
-               <xilinx:fileSet>
-                  <xilinx:name>view_upgrade_report_generator</xilinx:name>
-               </xilinx:fileSet>
-               <xilinx:fileSet>
                   <xilinx:name>customization_generator</xilinx:name>
                   <xilinx:file>
                      <xilinx:name>./summary.log</xilinx:name>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:19 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:11 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xE267D6D1</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram.mif</xilinx:name>
                      <xilinx:userFileType>mif</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:19 GMT 2012</xilinx:timeStamp>
-                     <xilinx:checkSum>0x079F83BE</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:11 GMT 2012</xilinx:timeStamp>
+                     <xilinx:checkSum>0xA138F45E</xilinx:checkSum>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -1287,16 +1255,16 @@
                   <xilinx:file>
                      <xilinx:name>./summary.log</xilinx:name>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:23 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:15 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xE267D6D1</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram.mif</xilinx:name>
                      <xilinx:userFileType>mif</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:23 GMT 2012</xilinx:timeStamp>
-                     <xilinx:checkSum>0x079F83BE</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
+                     <xilinx:checkSum>0xA138F45E</xilinx:checkSum>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -1304,9 +1272,9 @@
                   <xilinx:file>
                      <xilinx:name>./xram.xco</xilinx:name>
                      <xilinx:userFileType>xco</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
-                     <xilinx:checkSum>0x45D7FFC6</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
+                     <xilinx:checkSum>0x5BF11B1C</xilinx:checkSum>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -1317,7 +1285,7 @@
                      <xilinx:userFileType>txt</xilinx:userFileType>
                      <xilinx:timeStamp>Sat Jul 21 06:10:41 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x5661B352</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/doc/blk_mem_gen_v7_2_vinfo.html</xilinx:name>
@@ -1325,7 +1293,7 @@
                      <xilinx:userFileType>unknown</xilinx:userFileType>
                      <xilinx:timeStamp>Sat Jul 21 06:10:41 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x4D7A616C</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/doc/pg058-blk-mem-gen.pdf</xilinx:name>
@@ -1333,7 +1301,7 @@
                      <xilinx:userFileType>pdf</xilinx:userFileType>
                      <xilinx:timeStamp>Sat Jul 21 06:10:41 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xAE5E57E0</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -1342,329 +1310,329 @@
                      <xilinx:name>./xram/example_design/xram_exdes.ucf</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>ucf</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x8915DFA1</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/example_design/xram_exdes.vhd</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x8BCAC036</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/example_design/xram_exdes.xdc</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>xdc</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x78E2D49A</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/example_design/xram_prod.vhd</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xF1404F75</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/implement/implement.bat</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x164576BC</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/implement/implement.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x5C8BDEE7</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/implement/planAhead_ise.bat</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x80D7BF83</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/implement/planAhead_ise.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x65663622</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/implement/planAhead_ise.tcl</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x8F8FE8F1</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/implement/xst.prj</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x317ADE97</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/implement/xst.scr</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x4C95F4D2</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/addr_gen.vhd</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x886696A8</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/bmg_stim_gen.vhd</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x54A16323</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/bmg_tb_pkg.vhd</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xD4F2B061</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/checker.vhd</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x2A8E7144</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/data_gen.vhd</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xE0759FCA</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/functional/simcmds.tcl</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xC59A2194</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/functional/simulate_isim.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x538AAAE0</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/functional/simulate_mti.bat</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x86EA5D67</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/functional/simulate_mti.do</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xF8D003EE</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/functional/simulate_mti.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x86EA5D67</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/functional/simulate_ncsim.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x37949B97</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/functional/simulate_vcs.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xCAF404EA</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/functional/ucli_commands.key</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x5465405F</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/functional/vcs_session.tcl</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x45EF0607</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/functional/wave_mti.do</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x63DB6A1C</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/functional/wave_ncsim.sv</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xF910B026</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/random.vhd</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xE1CDC376</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/timing/simcmds.tcl</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xC59A2194</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/timing/simulate_isim.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xF3E40C90</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/timing/simulate_mti.bat</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x86EA5D67</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/timing/simulate_mti.do</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x1D167E23</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/timing/simulate_mti.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x86EA5D67</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/timing/simulate_ncsim.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x8A4E9FB7</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/timing/simulate_vcs.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x1F20D8C9</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/timing/ucli_commands.key</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x5465405F</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/timing/vcs_session.tcl</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xFA0B4FAA</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/timing/wave_mti.do</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x1716E92E</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/timing/wave_ncsim.sv</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xC48D6576</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/xram_synth.vhd</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xBAE0F40E</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram/simulation/xram_tb.vhd</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:31:24 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:15:16 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xA4789B16</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -1672,9 +1640,9 @@
                   <xilinx:file>
                      <xilinx:name>./xram.ngc</xilinx:name>
                      <xilinx:userFileType>ngc</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:32:12 GMT 2012</xilinx:timeStamp>
-                     <xilinx:checkSum>0x8E6DD32C</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:timeStamp>Sat Oct 13 10:16:04 GMT 2012</xilinx:timeStamp>
+                     <xilinx:checkSum>0x8A207779</xilinx:checkSum>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -1688,9 +1656,9 @@
                   <xilinx:file>
                      <xilinx:name>./xram.vho</xilinx:name>
                      <xilinx:userFileType>vho</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:32:12 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:16:04 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xC37052F5</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -1699,9 +1667,9 @@
                      <xilinx:name>./xram_synth.vhd</xilinx:name>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
                      <xilinx:userFileType>vhdlSynthesis</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:32:12 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:16:04 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xD471504B</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -1709,9 +1677,9 @@
                   <xilinx:file>
                      <xilinx:name>./xram.vhd</xilinx:name>
                      <xilinx:userFileType>vhdl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:32:12 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:16:04 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0x6F8D8D50</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -1722,23 +1690,23 @@
                   <xilinx:file>
                      <xilinx:name>./summary.log</xilinx:name>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:32:15 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:16:07 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xE267D6D1</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram.asy</xilinx:name>
                      <xilinx:userFileType>asy</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:32:16 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:16:08 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xB5B85979</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram.mif</xilinx:name>
                      <xilinx:userFileType>mif</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:32:16 GMT 2012</xilinx:timeStamp>
-                     <xilinx:checkSum>0x079F83BE</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:timeStamp>Sat Oct 13 10:16:08 GMT 2012</xilinx:timeStamp>
+                     <xilinx:checkSum>0xA138F45E</xilinx:checkSum>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -1747,9 +1715,9 @@
                      <xilinx:name>./xram_xmdf.tcl</xilinx:name>
                      <xilinx:userFileType>tclXmdf</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:32:16 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:16:08 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xD90BCE46</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -1758,17 +1726,17 @@
                      <xilinx:name>./xram.gise</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>gise</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:32:19 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:16:11 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xC0F39C06</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram.xise</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>xise</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:32:19 GMT 2012</xilinx:timeStamp>
-                     <xilinx:checkSum>0xE78A7FE1</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:timeStamp>Sat Oct 13 10:16:11 GMT 2012</xilinx:timeStamp>
+                     <xilinx:checkSum>0x38BE9ADE</xilinx:checkSum>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -1777,17 +1745,17 @@
                      <xilinx:name>./xram.gise</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>gise</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:32:22 GMT 2012</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Oct 13 10:16:14 GMT 2012</xilinx:timeStamp>
                      <xilinx:checkSum>0xB0375960</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./xram.xise</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>xise</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:32:22 GMT 2012</xilinx:timeStamp>
-                     <xilinx:checkSum>0x0CDA6A54</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:timeStamp>Sat Oct 13 10:16:14 GMT 2012</xilinx:timeStamp>
+                     <xilinx:checkSum>0x0BCDBF2A</xilinx:checkSum>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
@@ -1800,9 +1768,9 @@
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>txtFlist</xilinx:userFileType>
                      <xilinx:userFileType>txt</xilinx:userFileType>
-                     <xilinx:timeStamp>Sat Oct 13 07:32:22 GMT 2012</xilinx:timeStamp>
-                     <xilinx:checkSum>0xC13D8F72</xilinx:checkSum>
-                     <xilinx:generationId>generationID_4092992538</xilinx:generationId>
+                     <xilinx:timeStamp>Sat Oct 13 10:16:14 GMT 2012</xilinx:timeStamp>
+                     <xilinx:checkSum>0x5ACEF082</xilinx:checkSum>
+                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
