@@ -63,7 +63,7 @@ COMPONENT wrapped_sysram
 END COMPONENT;
 
 -- Configuration specification
-  FOR ALL : wrapped_sysram USE ENTITY XilinxCoreLib.blk_mem_gen_v6_3(behavioral)
+  FOR ALL : wrapped_sysram USE ENTITY XilinxCoreLib.blk_mem_gen_v7_2(behavioral)
     GENERIC MAP (
       c_addra_width => 16,
       c_addrb_width => 16,
@@ -92,7 +92,7 @@ END COMPONENT;
       c_has_rstb => 0,
       c_has_softecc_input_regs_a => 0,
       c_has_softecc_output_regs_b => 0,
-      c_init_file_name => "sysram.coe",
+      c_init_file_name => "sysram.mif",
       c_inita_val => "0",
       c_initb_val => "0",
       c_interface_type => 0,

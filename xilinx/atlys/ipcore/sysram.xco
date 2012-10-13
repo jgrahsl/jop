@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.2
-# Date: Fri Oct 12 16:06:39 2012
+# Date: Sat Oct 13 07:38:38 2012
 #
 ##############################################################
 #
@@ -12,7 +12,7 @@
 #
 ##############################################################
 #
-#  Generated from component: xilinx.com:ip:blk_mem_gen:6.3
+#  Generated from component: xilinx.com:ip:blk_mem_gen:7.2
 #
 ##############################################################
 #
@@ -36,7 +36,7 @@ SET verilogsim = false
 SET vhdlsim = true
 # END Project Options
 # BEGIN Select
-SELECT Block_Memory_Generator xilinx.com:ip:blk_mem_gen:6.3
+SELECT Block_Memory_Generator xilinx.com:ip:blk_mem_gen:7.2
 # END Select
 # BEGIN Parameters
 CSET additional_inputs_for_power_estimation=false
@@ -46,7 +46,7 @@ CSET axi_id_width=4
 CSET axi_slave_type=Memory_Slave
 CSET axi_type=AXI4_Full
 CSET byte_size=9
-CSET coe_file=no_coe_file_loaded
+CSET coe_file=/home/julian/jop/xilinx/atlys/sysram.coe
 CSET collision_warnings=ALL
 CSET component_name=sysram
 CSET disable_collision_warnings=false
@@ -59,7 +59,7 @@ CSET enable_b=Always_Enabled
 CSET error_injection_type=Single_Bit_Error_Injection
 CSET fill_remaining_memory_locations=false
 CSET interface_type=Native
-CSET load_init_file=false
+CSET load_init_file=true
 CSET memory_type=Single_Port_RAM
 CSET operating_mode_a=WRITE_FIRST
 CSET operating_mode_b=WRITE_FIRST
@@ -100,7 +100,7 @@ CSET write_width_a=16
 CSET write_width_b=16
 # END Parameters
 # BEGIN Extra information
-MISC pkg_timestamp=2012-03-20T18:34:43Z
+MISC pkg_timestamp=2012-06-25T21:54:09Z
 # END Extra information
 GENERATE
-# CRC: 2657d534
+# CRC: bcd0f984
