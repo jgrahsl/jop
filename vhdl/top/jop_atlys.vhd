@@ -56,6 +56,10 @@ use work.sc_pack.all;
 use work.jop_config_global.all;
 use work.jop_config.all;
 
+library unisim;
+use unisim.vcomponents.all;
+
+
 entity jop is
 
   generic (
@@ -81,7 +85,7 @@ architecture rtl of jop is
 -- Signals
 --
   signal clk_int : std_logic;
-  signal rst : std_logic;
+  signal rst     : std_logic;
   signal int_res : std_logic;
   signal res_cnt : unsigned(2 downto 0) := "000";  -- for the simulation
 
@@ -121,61 +125,84 @@ architecture rtl of jop is
   signal ser_ncts : std_logic;
   signal ser_nrts : std_logic;
 
-  signal we : std_logic;
-  signal en : std_logic;
-  signal locked : std_logic;
+  signal we        : std_logic;
+  signal en        : std_logic;
+  signal locked    : std_logic;
   signal clk_debug : std_logic;
-  signal pcmux		: std_logic_vector(7 downto 0);
-  signal r : std_logic;
+  signal pcmux     : std_logic_vector(7 downto 0);
+  signal r         : std_logic;
+
+  signal clkin1 : std_logic;
+
+  signal clk_pin_buf     : std_logic;
+  signal clkfb           : std_logic;
+  signal clk0            : std_logic;
+  signal clkdv           : std_logic;
+  signal clkfbout        : std_logic;
+  signal locked_internal : std_logic;
+  signal status_internal : std_logic_vector(7 downto 0);
+  
 begin
-
   ser_ncts <= '0';
---
--- intern reset
---
 
-  --process(clk)
-  --begin
-  --  if rising_edge(clk) then
-  --    if (res_cnt = 7) then
-  --      null;
-  --    else
-  --      res_cnt <= res_cnt+1;
-  --    end if;
+  -- Clocking primitive
+  --------------------------------------
 
-  --    int_res <= not res_cnt(0) or not res_cnt(1) or not res_cnt(2);
-  --  end if;
-  --end process;
-
---
---      Status Output
---
-
-  process (clk_int)
-  begin  -- process
-    if clk_int'event and clk_int = '1' then     -- rising clock edge
-      clk_debug <= not clk_debug;
-    end if;
-  end process;
-  led <= pcmux;
-
-
---
---      components of jop
---
-  your_instance_name : entity work.clkdivider
+  -- Instantiation of the DCM primitive
+  --    * Unused inputs are tied off
+  --    * Unused outputs are labeled unused
+  dcm_sp_inst : DCM_SP
+    generic map
+    (CLKDV_DIVIDE       => 2.000,
+     CLKFX_DIVIDE       => 1,
+     CLKFX_MULTIPLY     => 4,
+     CLKIN_DIVIDE_BY_2  => false,
+     CLKIN_PERIOD       => 10.0,
+     CLKOUT_PHASE_SHIFT => "NONE",
+     CLK_FEEDBACK       => "1X",
+     DESKEW_ADJUST      => "SYSTEM_SYNCHRONOUS",
+     PHASE_SHIFT        => 0,
+     STARTUP_WAIT       => false)
     port map
-    (                                   -- Clock in ports
-      CLK_IN1  => clk,
-      -- Clock out ports
-      CLK_OUT1 => clk_int,
-      -- Status and control signals
-      RESET    => int_res,
-      LOCKED   => LOCKED);
+    -- Input clock
+    (CLKIN    => clk_pin_buf,
+     CLKFB    => clkfb,
+     -- Output clocks
+     CLK0     => clk0,
+     CLK90    => open,
+     CLK180   => open,
+     CLK270   => open,
+     CLK2X    => open,
+     CLK2X180 => open,
+     CLKFX    => open,
+     CLKFX180 => open,
+     CLKDV    => clkdv,
+     -- Ports for dynamic phase shift
+     PSCLK    => '0',
+     PSEN     => '0',
+     PSINCDEC => '0',
+     PSDONE   => open,
+     -- Other control and status signals
+     LOCKED   => locked_internal,
+     STATUS   => status_internal,
+     RST      => '0',
+     -- Unused pin, tie low
+     DSSEN    => '0');
 
-  int_res <= '0';
-  rst <= not locked;
-
+  -- Output buffering
+  -------------------------------------
+  clkin1_buf : IBUFG
+    port map
+    (I => clk, O => clk_pin_buf);
+  clkf_buf : BUFG
+    port map
+    (I => clk0, O => clkfb);
+  clkout1_buf : BUFG
+    port map
+    (I => clk0, O => clk_int);
+  
+  led <= (others => '0');
+  rst     <= not locked_internal;
 
   cpu : entity work.jopcpu
     generic map(
@@ -224,7 +251,7 @@ begin
 
   my_sysram : entity work.sysram
     port map (
-      clka   => clk_int,                    -- [IN]
+      clka   => clk_int,                -- [IN]
       wea(0) => we,                     -- [IN]
       addra  => ram_addr(15 downto 0),  -- [IN]
       dina   => ram_dout,               -- [IN]

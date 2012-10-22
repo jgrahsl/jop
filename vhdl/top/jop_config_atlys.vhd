@@ -32,7 +32,7 @@ use work.jop_config_global.all;
 
 package jop_config is
 
-	constant clk_freq : integer := 50000000;
+	constant clk_freq : integer := 100000000;
 
 	-- constant for on-chip memory
 	constant ram_width : integer := STACK_SIZE_GLOBAL;	-- address bits of internal ram (sp,...)

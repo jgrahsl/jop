@@ -11,9 +11,10 @@ all:  gaisler base
 	vcom $(OPTIONS) -work work $(JOPDIR)/simulation/tb_atlys.vhd
 
 gaisler:
-#	vlib grlib
-#	vlib gaisler
-
+	vlib grlib
+	vlib gaisler
+	vlib work
+	vmap work work
 # ALTERA
 #	vcom $(OPTIONS) -work altera_mf  ${QUARTUS_ROOTDIR}/eda/sim_lib/altera_mf_components.vhd
 #	vcom $(OPTIONS) -work altera_mf  ${QUARTUS_ROOTDIR}/eda/sim_lib/altera_mf.vhd
@@ -37,7 +38,7 @@ base:
 	vcom $(OPTIONS) -work work $(JOPDIR)/simulation/sim_jop_config_100.vhd
 
 	vcom $(OPTIONS) -work work $(JOPDIR)/../xilinx/atlys/ipcore/xram.vhd
-        vcom $(OPTIONS) -work work $(JOPDIR)/xilinx/xram_s6.vhd"
+	vcom $(OPTIONS) -work work $(JOPDIR)/xilinx/xram_s6.vhd
 
 	vcom $(OPTIONS) -work work $(JOPDIR)/xilinx/s6_jbc.vhd
 	vcom $(OPTIONS) -work work $(JOPDIR)/rom.vhd
