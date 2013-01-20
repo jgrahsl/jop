@@ -1,5 +1,7 @@
 set -e
 
+#ant tools
+
 cd asm
 ant -f jopsim.xml
 cd ..

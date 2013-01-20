@@ -559,7 +559,8 @@
 				<pathelement location="java/tools/dist/lib/jop-tools.jar"/>
 				<pathelement location="java/lib/RXTXcomm.jar"/>
 			</classpath>
-			<arg line="${com-flag} java/target/dist/bin/${jopbin} ${com-port}"/>
+<!--			<arg line="${com-flag} java/target/dist/bin/${jopbin} ${com-port}"/> -->
+            <arg line="-e java/target/dist/bin/${jopbin} ${com-port}"/>
 		</java>
 <!--
 	this is the download version with down.exe
